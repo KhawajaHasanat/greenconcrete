@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Green Concrete Company</title>
+  <meta name="description" content="Terms of Service for Green Concrete Company WhatsApp Business communication service." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green: #16a34a;
+      --bg: #0a0f0d;
+      --surface: #111b14;
+      --surface2: #162019;
+      --border: #1e2d22;
+      --text: #f0fdf4;
+      --muted: #86efac;
+      --muted2: #6b7280;
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.75; }
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 2rem;
+      display: flex; align-items: center; gap: 1rem;
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(10px);
+    }
+    header .logo-icon {
+      width: 42px; height: 42px;
+      background: linear-gradient(135deg, var(--green), #4ade80);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 0 20px rgba(22,163,74,0.3);
+    }
+    header h1 { font-size: 1rem; font-weight: 600; }
+    header p { font-size: 0.78rem; color: var(--muted); }
+    header a { margin-left: auto; color: var(--muted); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    header a:hover { color: #4ade80; }
+    .hero {
+      background: linear-gradient(135deg, #0a1f0e 0%, #0a0f0d 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 4rem 2rem; text-align: center;
+    }
+    .hero .badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: rgba(22,163,74,0.15); color: #4ade80;
+      border: 1px solid rgba(74,222,128,0.25);
+      border-radius: 999px; padding: 0.3rem 1rem;
+      font-size: 0.78rem; font-weight: 500; margin-bottom: 1.25rem;
+    }
+    .hero h2 {
+      font-size: 2.5rem; font-weight: 700;
+      background: linear-gradient(135deg, #f0fdf4, #4ade80);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      margin-bottom: 0.75rem;
+    }
+    .hero p { color: var(--muted); font-size: 1rem; }
+    .updated {
+      display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1rem;
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 0.4rem 0.9rem;
+      font-size: 0.8rem; color: var(--muted);
+    }
+    main { max-width: 820px; margin: 3rem auto; padding: 0 2rem 4rem; }
+    .toc {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 1.5rem; margin-bottom: 2.5rem;
+    }
+    .toc h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+    .toc ol { padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.4rem; }
+    .toc a { color: #4ade80; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .toc a:hover { color: #86efac; text-decoration: underline; }
+    section { margin-bottom: 2.5rem; scroll-margin-top: 80px; }
+    .section-header {
+      display: flex; align-items: center; gap: 0.75rem;
+      margin-bottom: 1rem; padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-num {
+      width: 32px; height: 32px;
+      background: rgba(22,163,74,0.15); border: 1px solid rgba(74,222,128,0.25);
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      font-size: 0.8rem; font-weight: 700; color: #4ade80; flex-shrink: 0;
+    }
+    h3.section-title { font-size: 1.15rem; font-weight: 600; color: var(--text); }
+    p, li { color: #cbd5e1; font-size: 0.95rem; }
+    ul, ol { padding-left: 1.5rem; margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.4rem; }
+    .highlight-box {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-left: 3px solid var(--green); border-radius: 8px;
+      padding: 1rem 1.25rem; margin-top: 0.75rem;
+    }
+    .highlight-box p { color: var(--text); font-size: 0.9rem; }
+    .warning-box {
+      background: rgba(234,179,8,0.05); border: 1px solid rgba(234,179,8,0.2);
+      border-left: 3px solid #eab308; border-radius: 8px;
+      padding: 1rem 1.25rem; margin-top: 0.75rem;
+    }
+    .warning-box p { color: #fef08a; font-size: 0.9rem; }
+    .contact-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.25rem; margin-top: 1rem;
+      display: flex; flex-direction: column; gap: 0.4rem;
+    }
+    .contact-card strong { color: #4ade80; font-size: 0.85rem; }
+    .contact-card span { color: #cbd5e1; font-size: 0.9rem; }
+    footer {
+      background: var(--surface); border-top: 1px solid var(--border);
+      padding: 1.5rem 2rem; text-align: center;
+      font-size: 0.82rem; color: var(--muted2);
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: #4ade80; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-icon">🏗️</div>
+  <div>
+    <h1>Green Concrete Company</h1>
+    <p>WhatsApp Business System</p>
+  </div>
+  <a href="index.html">← Back to Home</a>
+</header>
+
+<div class="hero">
+  <div class="badge">📄 Legal Document</div>
+  <h2>Terms of Service</h2>
+  <p>Rules and conditions governing the use of our WhatsApp Business service</p>
+  <div class="updated">📅 Last Updated: July 13, 2025</div>
+</div>
+
+<main>
+
+  <div class="toc">
+    <h3>📋 Table of Contents</h3>
+    <ol>
+      <li><a href="#t1">About Our Service</a></li>
+      <li><a href="#t2">Acceptance of Terms</a></li>
+      <li><a href="#t3">Service Description</a></li>
+      <li><a href="#t4">User Responsibilities</a></li>
+      <li><a href="#t5">Prohibited Uses</a></li>
+      <li><a href="#t6">Intellectual Property</a></li>
+      <li><a href="#t7">Disclaimer of Warranties</a></li>
+      <li><a href="#t8">Limitation of Liability</a></li>
+      <li><a href="#t9">Governing Law — Saudi Arabia</a></li>
+      <li><a href="#t10">Contact Information</a></li>
+    </ol>
+  </div>
+
+  <!-- 1 -->
+  <section id="t1">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h3 class="section-title">About Our Service</h3>
+    </div>
+    <p>These Terms of Service govern your use of the WhatsApp Business communication service operated by <strong>Green Concrete Company</strong>, a company based in <strong>Saudi Arabia</strong>.</p>
+    <div class="contact-card">
+      <strong>Company Name</strong><span>Green Concrete Company</span>
+      <strong>Country</strong><span>Kingdom of Saudi Arabia</span>
+      <strong>WhatsApp Number</strong><span>+966 11 506 2541</span>
+      <strong>Contact Email</strong><span>contact@greenconcrete.com</span>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section id="t2">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <h3 class="section-title">Acceptance of Terms</h3>
+    </div>
+    <p>By sending a message to our WhatsApp Business number (<strong>+966 11 506 2541</strong>), or by receiving communications from us via WhatsApp, you agree to be bound by these Terms of Service.</p>
+    <div class="highlight-box">
+      <p>If you do not agree with any part of these terms, please refrain from communicating with us via WhatsApp. You may contact us by email at <strong>contact@greenconcrete.com</strong> instead.</p>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section id="t3">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <h3 class="section-title">Service Description</h3>
+    </div>
+    <p>Green Concrete Company's WhatsApp Business service provides the following:</p>
+    <ul>
+      <li>💬 <strong>Customer Communication</strong> — Sending and receiving business-related WhatsApp messages</li>
+      <li>📦 <strong>Order Notifications</strong> — Updates about orders, deliveries, and project status</li>
+      <li>🛠️ <strong>Customer Support</strong> — Responding to inquiries, complaints, and service requests</li>
+      <li>📢 <strong>Business Announcements</strong> — Important updates about our products and services</li>
+      <li>🤖 <strong>AI-Assisted Responses</strong> — Automated intelligent replies for common inquiries</li>
+    </ul>
+    <p style="margin-top:0.75rem;">This service is powered by the <strong>Meta WhatsApp Business API</strong> and is subject to <a href="https://www.whatsapp.com/legal/business-policy" target="_blank" style="color:#4ade80;">WhatsApp Business Policy</a> and <a href="https://developers.facebook.com/terms" target="_blank" style="color:#4ade80;">Meta Platform Terms</a>.</p>
+  </section>
+
+  <!-- 4 -->
+  <section id="t4">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <h3 class="section-title">User Responsibilities</h3>
+    </div>
+    <p>When using our WhatsApp Business service, you agree to:</p>
+    <ul>
+      <li>✅ Provide accurate and truthful information in your messages</li>
+      <li>✅ Use the service only for legitimate business communication purposes</li>
+      <li>✅ Respect the privacy of other users and our staff</li>
+      <li>✅ Comply with all applicable Saudi Arabian laws and regulations</li>
+      <li>✅ Comply with WhatsApp's own Terms of Service and Community Standards</li>
+      <li>✅ Not impersonate any person or entity</li>
+      <li>✅ Keep your WhatsApp account secure and not share access with others</li>
+    </ul>
+  </section>
+
+  <!-- 5 -->
+  <section id="t5">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <h3 class="section-title">Prohibited Uses</h3>
+    </div>
+    <p>You must not use our WhatsApp Business service to:</p>
+    <ul>
+      <li>❌ Send spam, unsolicited messages, or bulk promotional content</li>
+      <li>❌ Transmit harmful, offensive, threatening, or illegal content</li>
+      <li>❌ Attempt to hack, reverse-engineer, or disrupt our systems</li>
+      <li>❌ Collect data about our systems, employees, or other users</li>
+      <li>❌ Violate any applicable Saudi Arabian or international law</li>
+      <li>❌ Engage in fraudulent, deceptive, or misleading activities</li>
+      <li>❌ Send content that infringes on intellectual property rights</li>
+    </ul>
+    <div class="warning-box">
+      <p>⚠️ Violation of these prohibitions may result in immediate termination of access to our service and may be reported to relevant authorities.</p>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section id="t6">
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <h3 class="section-title">Intellectual Property</h3>
+    </div>
+    <p>All content, branding, logos, and materials associated with Green Concrete Company — including our WhatsApp Business system — are the exclusive intellectual property of Green Concrete Company.</p>
+    <ul>
+      <li>🏢 The name "Green Concrete Company" and its logo are proprietary</li>
+      <li>💻 Our AI WhatsApp system, software, and backend code are proprietary</li>
+      <li>📋 Message templates, automated responses, and content are owned by us</li>
+    </ul>
+    <p style="margin-top:0.75rem;">You may not reproduce, distribute, or create derivative works from any of our materials without express written permission.</p>
+  </section>
+
+  <!-- 7 -->
+  <section id="t7">
+    <div class="section-header">
+      <div class="section-num">7</div>
+      <h3 class="section-title">Disclaimer of Warranties</h3>
+    </div>
+    <p>Our WhatsApp Business service is provided <strong>"as is"</strong> without warranties of any kind. We do not guarantee:</p>
+    <ul>
+      <li>📶 Uninterrupted or error-free service availability</li>
+      <li>⏱️ Specific response times for messages</li>
+      <li>🔄 That all messages will be delivered successfully (subject to WhatsApp/Meta infrastructure)</li>
+    </ul>
+    <div class="highlight-box">
+      <p>Service availability depends on Meta's WhatsApp platform, internet connectivity, and factors outside our direct control.</p>
+    </div>
+  </section>
+
+  <!-- 8 -->
+  <section id="t8">
+    <div class="section-header">
+      <div class="section-num">8</div>
+      <h3 class="section-title">Limitation of Liability</h3>
+    </div>
+    <p>To the maximum extent permitted by Saudi Arabian law, Green Concrete Company shall not be liable for:</p>
+    <ul>
+      <li>Any indirect, incidental, or consequential damages arising from use of our WhatsApp service</li>
+      <li>Loss of data, business opportunities, or revenue related to service interruptions</li>
+      <li>Actions taken by Meta/WhatsApp that affect message delivery or account status</li>
+      <li>Unauthorized access to communications caused by factors outside our control</li>
+    </ul>
+  </section>
+
+  <!-- 9 -->
+  <section id="t9">
+    <div class="section-header">
+      <div class="section-num">9</div>
+      <h3 class="section-title">Governing Law — Saudi Arabia</h3>
+    </div>
+    <p>These Terms of Service shall be governed by and construed in accordance with the laws of the <strong>Kingdom of Saudi Arabia</strong>.</p>
+    <ul>
+      <li>⚖️ Any disputes arising from these terms shall be subject to the exclusive jurisdiction of the courts of <strong>Saudi Arabia</strong></li>
+      <li>🏛️ We will first attempt to resolve any dispute through good-faith negotiation</li>
+      <li>📋 If negotiation fails, disputes shall be resolved through the competent Saudi Arabian judicial system</li>
+    </ul>
+    <div class="highlight-box">
+      <p>By using our service, you consent to the jurisdiction of Saudi Arabian courts for any disputes relating to these Terms of Service.</p>
+    </div>
+  </section>
+
+  <!-- 10 -->
+  <section id="t10">
+    <div class="section-header">
+      <div class="section-num">10</div>
+      <h3 class="section-title">Contact Information</h3>
+    </div>
+    <p>For any questions or concerns about these Terms of Service, please contact us:</p>
+    <div class="contact-card">
+      <strong>Company</strong><span>Green Concrete Company</span>
+      <strong>Email</strong><span>contact@greenconcrete.com</span>
+      <strong>Legal Email</strong><span>legal@greenconcrete.com</span>
+      <strong>WhatsApp</strong><span>+966 11 506 2541</span>
+      <strong>Country</strong><span>Kingdom of Saudi Arabia</span>
+    </div>
+    <p style="margin-top:1rem; font-size:0.88rem; color:var(--muted2);">
+      Green Concrete Company reserves the right to modify these Terms of Service at any time. Changes will be effective upon posting the updated version at this URL. Your continued use of our WhatsApp service after any changes constitutes acceptance of the revised terms.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Green Concrete Company — Saudi Arabia &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="privacy-policy.html">Privacy Policy</a></p>
+  <p style="margin-top:0.4rem;">Last Updated: July 13, 2025</p>
+</footer>
+
+</body>
+</html>
