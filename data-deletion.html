@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Deletion Request — Green Concrete Company</title>
+  <meta name="description" content="Request deletion of your personal data from Green Concrete Company WhatsApp Business service." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green: #16a34a;
+      --bg: #0a0f0d;
+      --surface: #111b14;
+      --surface2: #162019;
+      --border: #1e2d22;
+      --text: #f0fdf4;
+      --muted: #86efac;
+      --muted2: #6b7280;
+      --red: #ef4444;
+      --red-bg: rgba(239,68,68,0.08);
+      --red-border: rgba(239,68,68,0.2);
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.75; }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 2rem;
+      display: flex; align-items: center; gap: 1rem;
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(10px);
+    }
+    header .logo-icon {
+      width: 42px; height: 42px;
+      background: linear-gradient(135deg, var(--green), #4ade80);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 0 20px rgba(22,163,74,0.3);
+    }
+    header h1 { font-size: 1rem; font-weight: 600; }
+    header p { font-size: 0.78rem; color: var(--muted); }
+    header a { margin-left: auto; color: var(--muted); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    header a:hover { color: #4ade80; }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, #1a0a0a 0%, #0a0f0d 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 4rem 2rem; text-align: center;
+    }
+    .hero .badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: var(--red-bg); color: #fca5a5;
+      border: 1px solid var(--red-border);
+      border-radius: 999px; padding: 0.3rem 1rem;
+      font-size: 0.78rem; font-weight: 500; margin-bottom: 1.25rem;
+    }
+    .hero h2 {
+      font-size: 2.5rem; font-weight: 700;
+      background: linear-gradient(135deg, #f0fdf4, #fca5a5);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      margin-bottom: 0.75rem;
+    }
+    .hero p { color: var(--muted); font-size: 1rem; max-width: 560px; margin: 0 auto; }
+    .updated {
+      display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1rem;
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 0.4rem 0.9rem;
+      font-size: 0.8rem; color: var(--muted);
+    }
+
+    /* ── Main ── */
+    main { max-width: 820px; margin: 3rem auto; padding: 0 2rem 4rem; }
+
+    /* ── Info Strip ── */
+    .info-strip {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem; margin-bottom: 2.5rem;
+    }
+    .info-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.1rem;
+      display: flex; flex-direction: column; gap: 0.25rem;
+    }
+    .info-card .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted2); }
+    .info-card .value { font-size: 0.95rem; font-weight: 600; color: var(--text); }
+
+    /* ── Sections ── */
+    section { margin-bottom: 2.5rem; scroll-margin-top: 80px; }
+    .section-header {
+      display: flex; align-items: center; gap: 0.75rem;
+      margin-bottom: 1rem; padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-icon {
+      width: 36px; height: 36px;
+      background: rgba(22,163,74,0.12); border: 1px solid rgba(74,222,128,0.2);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    h3.section-title { font-size: 1.15rem; font-weight: 600; }
+    p, li { color: #cbd5e1; font-size: 0.95rem; }
+    ul { padding-left: 1.5rem; margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.4rem; }
+
+    /* ── Steps ── */
+    .steps { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; }
+    .step {
+      display: flex; gap: 1rem; align-items: flex-start;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.1rem;
+      transition: border-color 0.2s;
+    }
+    .step:hover { border-color: rgba(74,222,128,0.3); }
+    .step-num {
+      width: 32px; height: 32px; flex-shrink: 0;
+      background: rgba(22,163,74,0.15); border: 1px solid rgba(74,222,128,0.25);
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem; font-weight: 700; color: #4ade80;
+    }
+    .step-body h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem; }
+    .step-body p { font-size: 0.88rem; margin-top: 0; }
+
+    /* ── Data table ── */
+    .data-table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.88rem; }
+    .data-table th {
+      background: var(--surface2); color: var(--muted);
+      padding: 0.6rem 1rem; text-align: left;
+      font-weight: 500; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em;
+      border: 1px solid var(--border);
+    }
+    .data-table td { padding: 0.65rem 1rem; border: 1px solid var(--border); color: #cbd5e1; vertical-align: top; }
+    .data-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+    .tag {
+      display: inline-block; border-radius: 999px; padding: 0.15rem 0.65rem;
+      font-size: 0.72rem; font-weight: 500;
+    }
+    .tag.full { background: var(--red-bg); color: #fca5a5; border: 1px solid var(--red-border); }
+    .tag.partial { background: rgba(234,179,8,0.1); color: #fde68a; border: 1px solid rgba(234,179,8,0.2); }
+    .tag.kept { background: rgba(22,163,74,0.1); color: #86efac; border: 1px solid rgba(74,222,128,0.2); }
+
+    /* ── Email Template ── */
+    .email-template {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-left: 3px solid var(--green);
+      border-radius: 8px; padding: 1.25rem;
+      margin-top: 1rem; font-family: monospace; font-size: 0.85rem;
+      color: #cbd5e1; white-space: pre-wrap; line-height: 1.6;
+    }
+    .copy-hint {
+      font-size: 0.78rem; color: var(--muted2); margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    /* ── CTA Button ── */
+    .cta-section {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 2rem; text-align: center; margin-top: 2rem;
+    }
+    .cta-section h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-section p { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.75rem 1.5rem; border-radius: 10px;
+      font-size: 0.9rem; font-weight: 600; text-decoration: none;
+      transition: all 0.2s; cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--green); color: #fff;
+      box-shadow: 0 4px 20px rgba(22,163,74,0.3);
+    }
+    .btn-primary:hover { background: #15803d; transform: translateY(-2px); }
+    .btn-secondary {
+      background: var(--surface2); color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { border-color: rgba(74,222,128,0.4); transform: translateY(-2px); }
+
+    /* ── Highlight / Warning boxes ── */
+    .highlight-box {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-left: 3px solid var(--green); border-radius: 8px;
+      padding: 1rem 1.25rem; margin-top: 0.75rem;
+    }
+    .highlight-box p { color: var(--text); font-size: 0.9rem; }
+    .warning-box {
+      background: rgba(234,179,8,0.05); border: 1px solid rgba(234,179,8,0.2);
+      border-left: 3px solid #eab308; border-radius: 8px;
+      padding: 1rem 1.25rem; margin-top: 0.75rem;
+    }
+    .warning-box p { color: #fef08a; font-size: 0.9rem; }
+
+    /* ── Timeline ── */
+    .timeline { display: flex; flex-direction: column; gap: 0; margin-top: 1rem; }
+    .timeline-item { display: flex; gap: 1rem; }
+    .timeline-line { display: flex; flex-direction: column; align-items: center; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; background: #4ade80; flex-shrink: 0; margin-top: 4px; }
+    .line { width: 2px; background: var(--border); flex: 1; min-height: 30px; }
+    .timeline-item:last-child .line { display: none; }
+    .timeline-content { padding-bottom: 1.25rem; }
+    .timeline-content strong { font-size: 0.9rem; color: #4ade80; }
+    .timeline-content p { font-size: 0.88rem; margin-top: 0; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--surface); border-top: 1px solid var(--border);
+      padding: 1.5rem 2rem; text-align: center;
+      font-size: 0.82rem; color: var(--muted2);
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: #4ade80; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-icon">🏗️</div>
+  <div>
+    <h1>Green Concrete Company</h1>
+    <p>WhatsApp Business System</p>
+  </div>
+  <a href="index.html">← Back to Home</a>
+</header>
+
+<div class="hero">
+  <div class="badge">🗑️ Your Rights</div>
+  <h2>Data Deletion Request</h2>
+  <p>You have the right to request deletion of all personal data we hold about you. We will process your request within 30 days.</p>
+  <div class="updated">📅 Last Updated: July 13, 2025</div>
+</div>
+
+<main>
+
+  <!-- Info strip -->
+  <div class="info-strip">
+    <div class="info-card">
+      <span class="label">Response Time</span>
+      <span class="value">⏱️ Within 30 Days</span>
+    </div>
+    <div class="info-card">
+      <span class="label">Request Method</span>
+      <span class="value">📧 Via Email</span>
+    </div>
+    <div class="info-card">
+      <span class="label">Confirmation</span>
+      <span class="value">✅ Email Confirmation</span>
+    </div>
+    <div class="info-card">
+      <span class="label">Cost</span>
+      <span class="value">💚 Free of Charge</span>
+    </div>
+  </div>
+
+  <!-- What data we hold -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">📦</div>
+      <h3 class="section-title">What Data We Hold About You</h3>
+    </div>
+    <p>When you interact with our WhatsApp Business service, we store the following data in our secure database:</p>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Data Type</th>
+          <th>Description</th>
+          <th>Deletable?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>📱 Phone Number</td>
+          <td>Your WhatsApp number used to contact us</td>
+          <td><span class="tag full">✅ Fully Deleted</span></td>
+        </tr>
+        <tr>
+          <td>👤 Display Name</td>
+          <td>Your name as shared by WhatsApp/Meta</td>
+          <td><span class="tag full">✅ Fully Deleted</span></td>
+        </tr>
+        <tr>
+          <td>💬 Message History</td>
+          <td>Content of messages sent and received</td>
+          <td><span class="tag full">✅ Fully Deleted</span></td>
+        </tr>
+        <tr>
+          <td>🆔 WhatsApp ID</td>
+          <td>Unique identifier assigned by Meta</td>
+          <td><span class="tag full">✅ Fully Deleted</span></td>
+        </tr>
+        <tr>
+          <td>🕒 Timestamps</td>
+          <td>Date/time of first and last contact</td>
+          <td><span class="tag full">✅ Fully Deleted</span></td>
+        </tr>
+        <tr>
+          <td>📋 Business Records</td>
+          <td>Legal transaction records (if applicable)</td>
+          <td><span class="tag kept">⚖️ Kept (Saudi law requires 5 yrs)</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="warning-box">
+      <p>⚠️ Note: We can delete data from our own systems, but we cannot delete data held by <strong>Meta/WhatsApp</strong>. Please refer to <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" style="color:#fde68a;">WhatsApp's Privacy Policy</a> for Meta's data deletion process.</p>
+    </div>
+  </section>
+
+  <!-- How to request -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">📋</div>
+      <h3 class="section-title">How to Request Data Deletion</h3>
+    </div>
+    <p>Follow these simple steps to submit your data deletion request:</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>Send an Email</h4>
+          <p>Email us at <strong style="color:#4ade80;">privacy@greenconcrete.com</strong> with the subject line shown below.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>Include Your Phone Number</h4>
+          <p>Include the WhatsApp phone number (with country code) that you used to contact us, so we can locate your data.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>We Verify & Process</h4>
+          <p>We will verify your identity, locate your data, and process the deletion within <strong>30 days</strong>.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h4>Receive Confirmation</h4>
+          <p>We will send a confirmation email once your data has been successfully deleted from our systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Email template -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">✉️</div>
+      <h3 class="section-title">Email Template — Copy & Send</h3>
+    </div>
+    <p>You can copy and use this template when emailing us:</p>
+    <div class="email-template">To: privacy@greenconcrete.com
+Subject: Data Deletion Request — [Your Phone Number]
+
+Dear Green Concrete Company Privacy Team,
+
+I am writing to request the deletion of all personal data
+you hold about me in connection with your WhatsApp Business service.
+
+My WhatsApp Phone Number: +[Your Country Code][Your Number]
+(e.g. +966 55 866 4650)
+
+Please confirm:
+1. All personal data (phone number, messages, contact records) 
+   has been deleted from your systems.
+2. The date of deletion.
+
+I understand that legally required business records may be 
+retained as required by Saudi Arabian law.
+
+Thank you,
+[Your Name]</div>
+    <p class="copy-hint">📋 Copy the above, fill in your details, and send to privacy@greenconcrete.com</p>
+  </section>
+
+  <!-- Timeline -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">⏱️</div>
+      <h3 class="section-title">Deletion Timeline</h3>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-line"><div class="dot"></div><div class="line"></div></div>
+        <div class="timeline-content">
+          <strong>Day 0 — Request Received</strong>
+          <p>You send your deletion request email to privacy@greenconcrete.com</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-line"><div class="dot"></div><div class="line"></div></div>
+        <div class="timeline-content">
+          <strong>Day 1–3 — Acknowledgement</strong>
+          <p>We send an acknowledgement email confirming we received your request</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-line"><div class="dot"></div><div class="line"></div></div>
+        <div class="timeline-content">
+          <strong>Day 3–7 — Identity Verification</strong>
+          <p>We verify that the request is from the rightful owner of the phone number</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-line"><div class="dot"></div><div class="line"></div></div>
+        <div class="timeline-content">
+          <strong>Day 7–30 — Data Deleted</strong>
+          <p>All eligible personal data is permanently deleted from our database</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-line"><div class="dot"></div></div>
+        <div class="timeline-content">
+          <strong>Day ≤30 — Confirmation Sent</strong>
+          <p>We send a final confirmation email with the deletion date and details</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h3>🗑️ Ready to Request Deletion?</h3>
+    <p>Send your request now — it's free and we'll process it within 30 days</p>
+    <div class="btn-group">
+      <a class="btn btn-primary" href="mailto:privacy@greenconcrete.com?subject=Data%20Deletion%20Request">
+        ✉️ Email Us Now
+      </a>
+      <a class="btn btn-secondary" href="privacy-policy.html">
+        🔒 View Privacy Policy
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2025 Green Concrete Company — Saudi Arabia &nbsp;|&nbsp;
+    <a href="index.html">Home</a> &nbsp;|&nbsp;
+    <a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp;
+    <a href="terms.html">Terms of Service</a>
+  </p>
+  <p style="margin-top:0.4rem;">Last Updated: July 13, 2025</p>
+</footer>
+
+</body>
+</html>
